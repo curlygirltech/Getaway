@@ -1,13 +1,13 @@
-# Getaway/ShareSpace
+# ShareSpace
 
 Overview
-Your home away from home 
-Project Title is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper.
+Sharespace is an app where hosts give guests access to their homes for the best stays in their place of choice. Hosts are able to post their home(s) for stay and guests can plan and book their accommodations based on the dates and rates. Your home away from home, Sharespace aims to give you the perfect getaway. 
 
 MVP
 
-Fuctional Front-end with working links
+Responsive and fuctional Front-end with working links
 Full CRUD Backend using Ruby on Rails 
+
 
 The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
@@ -15,14 +15,10 @@ The Project Title MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. P
 
 
 Goals
-Lorem ipsum, dolor sit amet,
-consectetur adipiscing elit.
-Phasellus dapibus fermentum risus vitae bibendum.
-Integer vel ipsum mollis odio sollicitudin ornare eu vel ex.
-etc.
+Fully functional full-stack app with full CRUD capabilities using Ruby on rails 
 
 Libraries and Dependencies
-Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+Use this section to list all supporting libraries and dependencies, and their role in the project. 
 
 Library	Description
 React	Lorem ipsum dolor sit amet, consectetur.
@@ -55,13 +51,10 @@ Dummy Link
 
 Mobile Resource Index
 Component Tree
+https://whimsical.com/sharespace-HMT29H9xQ3qJsKFEhMXcK7
 Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
-Component Tree Sample
-
 Component Architecture
-Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
-
 
 src
 |__ assets/
@@ -85,7 +78,10 @@ src
     |__ Home.jsx
     |__ HomeCreate.jsx
     |__ HomeDetails.jsx
-    |__ SignIn/jsx
+    |__ SignIn.jsx
+    |__ SignOut.jsx
+    |__ MyAccount.jsx
+    
 |__ services/
 
 Time Estimates
@@ -102,10 +98,13 @@ Server (Back End)
 ERD Model
 Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-ERD Sample
+https://app.diagrams.net/?libs=general;uml#G1w_jGhtQVk5Qq-CahupqMrrCED49IFd7N
 
 Post-MVP
-Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Guests will be able to leave ratings and reviews based on their exeriences
+"Featured Homes" section with the highest rated stays 
+Advanced CSS using libraries
+
 
 Code Showcase
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
