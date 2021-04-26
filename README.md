@@ -1,35 +1,34 @@
 # ShareSpace
 
-Overview
+## Overview
 Sharespace is an app where hosts give guests access to their homes for the best stays in their place of choice. Hosts are able to post their home(s) for stay and guests can plan and book their accommodations based on the dates and rates. Your home away from home, Sharespace aims to give you the perfect getaway. 
 
-MVP
+## MVP
 
 Responsive and fuctional Front-end with working links
 Full CRUD Backend using Ruby on Rails 
+3 tables (one with association)
 
+## Goals
 
-The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+Fully functional full-stack app with full CRUD capabilities using Ruby on Rails. This will also include a database with 3 tables, showing at least one association  
 
-The Project Title MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper.
+## Libraries and Dependencies
 
-
-Goals
-Fully functional full-stack app with full CRUD capabilities using Ruby on rails 
-
-Libraries and Dependencies
 Use this section to list all supporting libraries and dependencies, and their role in the project. 
 
-Library	Description
-React	Lorem ipsum dolor sit amet, consectetur.
-React Router	Lorem ipsum dolor sit amet, consectetur.
-React SemanticUI	Lorem ipsum dolor sit amet, consectetur.
-Express	Lorem ipsum dolor sit amet, consectetur.
-Express Router	Lorem ipsum dolor sit amet, consectetur.
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|      React       | Front end.                                 |
+|     React Router      | Front end.                                 |
+|      Material UI      | CSS Library                                |
+|      React Semantic UI       | CSS Library                                 |
+|     Ruby on Rails     | Backend-Development                               |
+|     Authorization      | Backend and Frontend                                |
 
 
-Client (Front End)
-Wireframes
+## Wireframes
+
 Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 Dummy Link
@@ -49,13 +48,13 @@ Dummy Link
 Tablet Resource Index
 Dummy Link
 
-Mobile Resource Index
-Component Tree
+
+## Component Tree
+
 https://whimsical.com/sharespace-HMT29H9xQ3qJsKFEhMXcK7
-Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 Component Architecture
-
+```
 src
 |__ assets/
       |__ fonts
@@ -83,27 +82,45 @@ src
     |__ MyAccount.jsx
     
 |__ services/
+```
 
 Time Estimates
 Use this section to estimate the time necessary to build out each of the components you've described above.
 
-Task	Priority	Estimated Time	Time Invested	Actual Time
-Add Contact Form	L	3 hrs	2 hrs	3 hrs
-Create CRUD Actions	H	3 hrs	1 hrs	TBD
-TOTAL		6 hrs	3 hrs	TBD
-Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+| Task                                    | Priority | Estimated Time | Time Invested | Actual Time  |
+|-----------------------------------------|----------|----------------|---------------|--------------|
+| BACKEND                                 |          |                |               |              |
+| Create tables w/association             | MVP      | 2hrs           |               |              |
+| Create models                           | MVP      | 2hrs           |               |              |
+| Set up CRUD on controllers              | MVP      | 3hrs           |               |              |
+| Seed the database                       | MVP      | 1.5hrs         |               |              |
+| Test Backend w/ Postman                 |          | 1.5hrs         |               |              |
+| Create routes                           | MVP      | 3hrs           |               |              |
+| Deploy Backend with Heroku              | MVP      | 2hrs           |               |              |
+| FRONTEND                                |          |                |               |              |
+| Create services folder/and js files     | MVP      | 3hrs           |               |              |
+| set up handler functions in App.js      | MVP      | 2.5hrs         |               |              |
+| create routes for screens               | MVP      | 2.5hrs         |               |              |
+| Set up main container (API calls)       | MVP      | 3hrs           |               |              |
+| Set up Sign in/Sign Out Authentications |          | 3hrs           |               |              |
+| Nav bar and footer                      |          | 1.5hrs         |               |              |
+| Deploy frontend with Netlify            | MVP      | 2hrs           |               |              |
+| CSS/STYLING                             |          |                |               |              |
+| Responsive design                       | MVP      | 3hrs           |               |              |
+| Media queries                           | MVP      | 1.5hrs         |               |              |
+| Color themes                            |          | 1.5hrs         |               |              |
+| TOTAL                                   |          | 38.5           |               |              |
 
 
-Server (Back End)
-ERD Model
-Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+## ERD Model
 
 https://app.diagrams.net/?libs=general;uml#G1w_jGhtQVk5Qq-CahupqMrrCED49IFd7N
 
-Post-MVP
+## Post-MVP
 Guests will be able to leave ratings and reviews based on their exeriences
 "Featured Homes" section with the highest rated stays 
 Advanced CSS using libraries
+Authorization for hosts and guests
 
 
 Code Showcase
