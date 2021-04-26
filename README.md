@@ -43,25 +43,29 @@ src
       |__ images
       
 |__ components/
-|__ Screens/
-      |__ Navbar.jsx
-      |__ Footer.jsx
-      |__ SignIn.jsx
-      |__ SignUp.jsx
-      |__ Home.jsx
-      |__ HomeDetails.jsx
-      |__ HomeCreate.jsx
-      |__ Homeupdate.jsx
-      |__ MyAccount.jsx
-|__ containers/
-      |__ MainContainer.jsx
+      |__shared
+            |__ Layout.jsx
+            |__ Navbar.jsx
+            |__ Footer.jsx
+      |__ Screens/
+            |__ Navbar.jsx
+            |__ Footer.jsx
+            |__ SignIn.jsx
+            |__ SignUp.jsx
+            |__ Home.jsx
+            |__ HomeDetails.jsx
+            |__ HomeCreate.jsx
+            |__ Homeupdate.jsx
+            |__ MyAccount.jsx
+      |__ containers/
+            |__ MainContainer.jsx
+      |__ App.js
       
 |__ services/
-|__ App.js
-|__ auth.js
-|__ guests.js
-|__ hosts.js
-|__ bookings.js
+      |__ apiconfig.js
+      |__ users.js
+      |__ home.js
+      |__ bookings.js
 
 ```
 
@@ -70,7 +74,7 @@ src
 
 | Task                                    | Priority | Estimated Time | Time Invested | Actual Time  |
 |-----------------------------------------|----------|----------------|---------------|--------------|
-| BACKEND                                 |          |                |               |              |
+| **BACKEND**                                 |          |                |               |              |
 | Create tables w/association             | MVP      | 2hrs           |               |              |
 | Create models                           | MVP      | 2hrs           |               |              |
 | Set up CRUD on controllers              | MVP      | 3hrs           |               |              |
@@ -78,7 +82,7 @@ src
 | Test Backend w/ Postman                 |          | 1.5hrs         |               |              |
 | Create routes                           | MVP      | 3hrs           |               |              |
 | Deploy Backend with Heroku              | MVP      | 2hrs           |               |              |
-| FRONTEND                                |          |                |               |              |
+| **FRONTEND**                                |          |                |               |              |
 | Create services folder/and js files     | MVP      | 3hrs           |               |              |
 | set up handler functions in App.js      | MVP      | 2.5hrs         |               |              |
 | create routes for screens               | MVP      | 2.5hrs         |               |              |
@@ -86,7 +90,7 @@ src
 | Set up Sign in/Sign Out Authentications |          | 3hrs           |               |              |
 | Nav bar and footer                      |          | 1.5hrs         |               |              |
 | Deploy frontend with Netlify            | MVP      | 2hrs           |               |              |
-| CSS/STYLING                             |          |                |               |              |
+| **CSS/STYLING**                             |          |                |               |              |
 | Responsive design                       | MVP      | 3hrs           |               |              |
 | Media queries                           | MVP      | 1.5hrs         |               |              |
 | Color themes                            |          | 1.5hrs         |               |              |
