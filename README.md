@@ -12,18 +12,18 @@ Sharespace is an app where hosts give guests access to their homes for the best 
 
 ## Goals
 
-Functional full-stack app with full CRUD capabilities using Ruby on Rails. This will also include a database with 3 tables, showing at least one association  
+Functional full-stack app with full CRUD capabilities using Ruby on Rails. This will also include a  postgresql database with 3 tables, showing at least one association  
 
 ## Libraries and Dependencies
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | Front end.                                 |
-|     React Router      | Front end.                                 |
-|      Material UI      | CSS Library                                |
-|      React Semantic UI       | CSS Library                                 |
-|     Ruby on Rails     | Backend-Development                               |
-|     Authorization      | Backend and Frontend                                |
+|      React       | Front-end                                 |
+|     React Router      | Front-end                           
+|     Rails     | Backend                                   |      
+|     Bcrypt     | Backend                                 |
+|     JWT       | Backend                                |
+|     Axios     | Front-end                                 |
 
 
 ## Wireframes
