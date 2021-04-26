@@ -75,27 +75,27 @@ src
 | Task                                    | Priority | Estimated Time | Time Invested | Actual Time  |
 |-----------------------------------------|----------|----------------|---------------|--------------|
 | **BACKEND**                                 |          |                |               |              |
-| Create tables w/association             | MVP      | 2hrs           |               |              |
-| Create models                           | MVP      | 2hrs           |               |              |
-| Set up CRUD on controllers              | MVP      | 3hrs           |               |              |
-| Seed the database                       | MVP      | 1.5hrs         |               |              |
-| Test Backend w/ Postman                 |          | 1.5hrs         |               |              |
-| Create routes                           | MVP      | 3hrs           |               |              |
-| Deploy Backend with Heroku              | MVP      | 2hrs           |               |              |
-| **FRONTEND**                                |          |                |               |              |
-| Create services folder/and js files     | MVP      | 3hrs           |               |              |
-| set up handler functions in App.js      | MVP      | 2.5hrs         |               |              |
-| create routes for screens               | MVP      | 2.5hrs         |               |              |
-| Set up main container (API calls)       | MVP      | 3hrs           |               |              |
-| Set up Sign in/Sign Out Authentications |          | 3hrs           |               |              |
-| Nav bar and footer                      |          | 1.5hrs         |               |              |
-| Deploy frontend with Netlify            | MVP      | 2hrs           |               |              |
+| Create tables w/association             | high      | 2hrs           |               |              |
+| Create models                           | high     | 2hrs           |               |              |
+| Set up CRUD on controllers              | high     | 3hrs           |               |              |
+| Seed the database                       | high      | 1.5hrs         |               |              |
+| Test Backend w/ Postman                 |  low       | 1.5hrs         |               |              |
+| Create routes                           | high      | 3hrs           |               |              |
+| Deploy Backend with Heroku              | high     | 2hrs           |               |              |
+| **FRONTEND**                            |          |                |               |              |
+| Create services folder/and js files     | high      | 3hrs           |               |              |
+| set up handler functions in App.js      | high     | 2.5hrs         |               |              |
+| create routes for screens               | high     | 2.5hrs         |               |              |
+| Set up main container (API calls)       | high     | 3hrs           |               |              |
+| Set up Sign in/Sign Out Authentications | low     | 3hrs           |               |              |
+| Nav bar and footer                      | medium         | 1.5hrs         |               |              |
+| Deploy frontend with Netlify            | high      | 2hrs           |               |              |
 | **CSS/STYLING**                             |          |                |               |              |
-| Responsive design                       | MVP      | 3hrs           |               |              |
-| Media queries                           | MVP      | 1.5hrs         |               |              |
-| Color themes                            |          | 1.5hrs         |               |              |
-| Research and Debugging                            |          | 1.5hrs         |               |              |
-| TOTAL                                   |          | 38.5           |               |              |
+| Responsive design                       | high     | 3hrs           |               |              |
+| Media queries                           | high      | 1.5hrs         |               |              |
+| Color themes                            |  low    | 1.5hrs         |               |              |
+| Research and Debugging                  |  medium  | 3hrs         |               |              |
+| TOTAL                                   |          | 41.5           |               |              |
 
 
 ## ERD Model
