@@ -94,6 +94,7 @@ src
 | Responsive design                       | MVP      | 3hrs           |               |              |
 | Media queries                           | MVP      | 1.5hrs         |               |              |
 | Color themes                            |          | 1.5hrs         |               |              |
+| Research and Debugging                            |          | 1.5hrs         |               |              |
 | TOTAL                                   |          | 38.5           |               |              |
 
 
@@ -105,11 +106,11 @@ https://app.diagrams.net/?libs=general;uml#G1w_jGhtQVk5Qq-CahupqMrrCED49IFd7N
 * Guests will be able to leave ratings and reviews based on their exeriences
 * "Featured Homes" section with the highest rated stays 
 * Advanced CSS using libraries
-* Authorization for hosts and guests
+
 
 
 ## Code Showcase
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
 
 ## Code Issues & Resolutions
-Use this section to list of all major issues encountered and their resolution.
+
