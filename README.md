@@ -41,8 +41,9 @@ src
       |__ fonts
       |__ graphics
       |__ images
-      |__ mockups
+      
 |__ components/
+|__ Screens/
       |__ Navbar.jsx
       |__ Footer.jsx
       |__ SignIn.jsx
@@ -58,6 +59,10 @@ src
 |__ services/
 |__ App.js
 |__ auth.js
+|__ guests.js
+|__ hosts.js
+|__ bookings.js
+
 ```
 
 ## Time Estimates
