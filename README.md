@@ -1,21 +1,20 @@
 # ShareSpace
 
 ## Overview
+
 Sharespace is an app where hosts give guests access to their homes for the best stays in their place of choice. Hosts are able to post their home(s) for stay and guests can plan and book their accommodations based on the dates and rates. Your home away from home, Sharespace aims to give you the perfect getaway. 
 
 ## MVP
 
-Responsive and fuctional Front-end with working links
-Full CRUD Backend using Ruby on Rails 
-3 tables (one with association)
+* Responsive and fuctional Front-end with working links
+* Full CRUD Backend using Ruby on Rails 
+* 3 tables (one with association)
 
 ## Goals
 
-Fully functional full-stack app with full CRUD capabilities using Ruby on Rails. This will also include a database with 3 tables, showing at least one association  
+Functional full-stack app with full CRUD capabilities using Ruby on Rails. This will also include a database with 3 tables, showing at least one association  
 
 ## Libraries and Dependencies
-
-Use this section to list all supporting libraries and dependencies, and their role in the project. 
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -29,31 +28,13 @@ Use this section to list all supporting libraries and dependencies, and their ro
 
 ## Wireframes
 
-Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-Dummy Link
-
-Desktop Landing
-Dummy Link
-
-Desktop Hero
-Dummy Link
-
-Resource Index
-Dummy Link
-
-Resource Show
-Dummy Link
-
-Tablet Resource Index
-Dummy Link
-
+https://www.figma.com/file/YX0eYDMWEc8M2GjOkMJKo9/Sharespace?node-id=7%3A2
 
 ## Component Tree
 
 https://whimsical.com/sharespace-HMT29H9xQ3qJsKFEhMXcK7
 
-Component Architecture
+## Component Architecture
 ```
 src
 |__ assets/
@@ -70,22 +51,17 @@ src
       |__ HomeDetails.jsx
       |__ HomeCreate.jsx
       |__ Homeupdate.jsx
+      |__ MyAccount.jsx
 |__ containers/
-      |__ HomeContainer
+      |__ MainContainer.jsx
       
-|__ Screens
-    |__ Home.jsx
-    |__ HomeCreate.jsx
-    |__ HomeDetails.jsx
-    |__ SignIn.jsx
-    |__ SignOut.jsx
-    |__ MyAccount.jsx
-    
 |__ services/
+|__ App.js
+|__ auth.js
 ```
 
-Time Estimates
-Use this section to estimate the time necessary to build out each of the components you've described above.
+## Time Estimates
+
 
 | Task                                    | Priority | Estimated Time | Time Invested | Actual Time  |
 |-----------------------------------------|----------|----------------|---------------|--------------|
@@ -117,14 +93,14 @@ Use this section to estimate the time necessary to build out each of the compone
 https://app.diagrams.net/?libs=general;uml#G1w_jGhtQVk5Qq-CahupqMrrCED49IFd7N
 
 ## Post-MVP
-Guests will be able to leave ratings and reviews based on their exeriences
-"Featured Homes" section with the highest rated stays 
-Advanced CSS using libraries
-Authorization for hosts and guests
+* Guests will be able to leave ratings and reviews based on their exeriences
+* "Featured Homes" section with the highest rated stays 
+* Advanced CSS using libraries
+* Authorization for hosts and guests
 
 
-Code Showcase
+## Code Showcase
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
-Code Issues & Resolutions
+## Code Issues & Resolutions
 Use this section to list of all major issues encountered and their resolution.
