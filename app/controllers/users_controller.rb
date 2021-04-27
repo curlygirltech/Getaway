@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    User.find(user_params)
     render json: @user
   end
 
