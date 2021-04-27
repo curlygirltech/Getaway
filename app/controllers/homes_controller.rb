@@ -10,6 +10,10 @@ class HomesController < ApplicationController
 
   # GET /homes/1
   def show
+    #first find home 
+    #find all reviews associated with home 
+    #look at review numbers and avg them 
+    #append avg number to home object
     render json: @home
   end
 

@@ -27,6 +27,11 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1
   def update
     if @booking.update(booking_params)
+      #if a review number exists 
+      #find all bookings for this house
+      #access all the review numbers 
+      #combine numbers to create new avg 
+      #store new average back on book 
       render json: @booking
     else
       render json: @booking.errors, status: :unprocessable_entity
