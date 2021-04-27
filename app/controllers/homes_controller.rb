@@ -11,6 +11,7 @@ class HomesController < ApplicationController
   # GET /homes/1
   def show
     #first find home 
+    Home.find(home_params)
     #find all reviews associated with home 
     #look at review numbers and avg them 
     #append avg number to home object
@@ -20,7 +21,9 @@ class HomesController < ApplicationController
   # POST /homes
   def create
     @home = Home.new(home_params)
-
+    
+    #create a method to only allow hosts to create homes 
+    host &&
     if @home.save
       render json: @home, status: :created,
     else
@@ -29,16 +32,17 @@ class HomesController < ApplicationController
   end
 
   # PATCH/PUT /homes/1
-  def update
-    if @home.update(home_params)
-      render json: @home
-    else
-      render json: @home.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @home.update(home_params)
+  #     render json: @home
+  #   else
+  #     render json: @home.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /homes/1
   def destroy
+    #create a method where only hosts can destroy homes
     @home.destroy
   end
 

@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings
   def index
+    #show all for specific users 
     @bookings = Booking.all
 
     render json: @bookings

@@ -10,8 +10,8 @@ Booking.destroy_all
 Home.destroy_all
 User.destroy_all
 
-@user = User.create!(username: "Dan", email: "Dantheman@gmail.com", img_url:"picture", host:true, password_digest:"123456")
-@guest = User.create!(username: "Dan", email: "Dantheman@gmail.com", img_url:"picture", host:false, password_digest:"123456")
+@user = User.create!(username: "Dan", email: "Dantheman@gmail.com", img_url:"picture", host:true, password:"123456")
+@guest = User.create!(username: "Dan", email: "Dantheman@gmail.com", img_url:"picture", host:false, password:"123456")
 puts "#{User.count} users created"
 
 
