@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+  before_action :authorize_request, only: [:create, :delete]
   before_action :set_home, only: [:show, :update, :destroy]
 
   # GET /homes
@@ -21,24 +22,16 @@ class HomesController < ApplicationController
   # POST /homes
   def create
     @home = Home.new(home_params)
+    @home.user = @current_user
+    if @current_user.host and @home.save
     
-    #create a method to only allow hosts to create homes 
-    host &&
-    if @home.save
       render json: @home, status: :created,
     else
       render json: @home.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /homes/1
-  # def update
-  #   if @home.update(home_params)
-  #     render json: @home
-  #   else
-  #     render json: @home.errors, status: :unprocessable_entity
-  #   end
-  # end
+ 
 
   # DELETE /homes/1
   def destroy
