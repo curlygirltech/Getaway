@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -27,18 +28,25 @@ export default function Nav() {
 
 
   return (
+    <>
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style= {{backgroundColor: "#214E08" }}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Nav
+            ShareSpace
           </Typography>
-          <Button color="inherit">Login</Button>
+            <Button style= {{backgroundColor: "white"}}>
+            <Link to='/login'style= {{textDecoration: "none"}}>Login</Link>
+            </Button>
         </Toolbar>
       </AppBar>
     </div>
+    {/* <div>
+      <Link to='/login'>Login</Link>
+    </div> */}
+    </>
   )
 }

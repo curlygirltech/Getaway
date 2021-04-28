@@ -1,11 +1,20 @@
 import './App.css';
-import Nav from './screens/Nav'
+import { Link, Route, Switch } from 'react-router-dom'
+import Nav from './Layout/Nav'
+import Layout from './Layout/Layout'
+import Login from './screens/Login'
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <h1>Sharespace</h1>
+    <Layout>
+      <Switch>
+          <Route path='/login'>
+            <Login/>
+          </Route>
+      </Switch>
+      
+    </Layout>
 
     </div>
   );
