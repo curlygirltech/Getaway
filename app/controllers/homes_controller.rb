@@ -12,7 +12,7 @@ class HomesController < ApplicationController
   # GET /homes/1
   def show
     #first find home 
-    Home.find(home_params)
+    #Home.find(home_params)
     #find all reviews associated with home 
     #look at review numbers and avg them 
     #append avg number to home object
@@ -25,18 +25,24 @@ class HomesController < ApplicationController
     @home.user = @current_user
     if @current_user.host and @home.save
     
-      render json: @home, status: :created,
+      render json: @home, status: :created
     else
       render json: @home.errors, status: :unprocessable_entity
     end
   end
 
- 
+
 
   # DELETE /homes/1
   def destroy
+    
+    if @home.destroy 
+      render json: {
+        status: :ok, 
+        message: "deleted"
+      }
+    end
     #create a method where only hosts can destroy homes
-    @home.destroy
   end
 
   private

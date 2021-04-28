@@ -10,13 +10,51 @@ Booking.destroy_all
 Home.destroy_all
 User.destroy_all
 
-@user = User.create!(username: "Dan", email: "Dantheman@gmail.com", img_url:"picture", host:true, password:"123456")
-@guest = User.create!(username: "Dan", email: "Dantheman@gmail.com", img_url:"picture", host:false, password:"123456")
+@host = User.create!(username: "host", email: "Dantheman@gmail.com", img_url:"picture", host:true, password:"123456")
+@guest = User.create!(username: "guest", email: "Dantheman@gmail.com", img_url:"picture", host:false, password:"123456")
 puts "#{User.count} users created"
 
 
 @home = Home.create!(
-  user: @user,
+  user: @host,
+  img_url:"picture",
+  description: "best house ever!",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+
+)
+Home.create!(
+  user: @host,
+  img_url:"picture",
+  description: "best house ever!",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+)
+Home.create!(
+  user: @host,
+  img_url:"picture",
+  description: "best house ever!",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+)
+
+Home.create!(
+  user: @host,
+  img_url:"picture",
+  description: "best house ever!",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+)
+Home.create!(
+  user: @host,
   img_url:"picture",
   description: "best house ever!",
   rate: 250,
