@@ -1,13 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:show]
   
-  
-
   # GET /users/1
   def show
-    User.find(user_params)
-    render json: @user, include: [:homes, :bookings]
+    render json: @current_user, include: [:homes, :bookings]
   end
 
   # POST /users
@@ -15,7 +11,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
-      render json: @user, status: :created 
+      @token = encode({ id: @user.id })
+      render json: {
+        user: @user.attributes.except('password_digest'),
+        token: @token
+        }, status: :created 
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -23,11 +23,6 @@ class UsersController < ApplicationController
 
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
-
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:username, :email, :img_url, :host, :password)
