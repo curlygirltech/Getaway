@@ -11,7 +11,7 @@ export const getAllBookings = async () {
 
 //show
 export const getOneBooking = async (id) => {
-  const resp = await api.get(`/booking/${id}`);
+  const resp = await api.get(`/bookings/${id}`);
   return resp.data
 
 }
@@ -27,7 +27,7 @@ export const putBooking = async (id, bookingData) => {
 }
 //delete
 export const deleteBooking = async (id) => {
-  const resp = await api.delete(`/booking/${id}`)
+  const resp = await api.delete(`/bookings/${id}`)
   return resp
 }
 
