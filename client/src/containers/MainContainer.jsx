@@ -5,14 +5,16 @@ import { async } from 'regenerator-runtime';
 import Homes from '../screens/Homes'
 
 import {getAllHomes} from "../services/home"
-import {getAllBookings} from "../services/bookings"
-import Bookings from '../screens/Bookings';
+import {getAllUsersBookings} from "../services/bookings"
+// import Bookings from '../screens/BookingConfirmation';
+import BookingConfirmation from '../screens/BookingConfirmation';
 
 export default function MainContainer(props) {
   const [homes, setHomes] = useState([]);
   const [bookings, setBookings] = useState([]);
   const history = useHistory();
   const { currentUser } = props;
+  console.log(currentUser && currentUser)
 
   useEffect(() => {
     const fetchHomes = async () => {
@@ -24,7 +26,7 @@ export default function MainContainer(props) {
 
   useEffect(() => {
     const fetchBookings = async () => {
-      const bookingData = await getAllBookings()
+      const bookingData = await getAllUsersBookings()
       setBookings(bookingData)
     }
     fetchBookings()
@@ -38,8 +40,8 @@ export default function MainContainer(props) {
   return (
     
       <Switch>
-      <Route path='/bookings'>
-        <Bookings bookings={bookings}/>
+      <Route path='/bookingconfirmation'>
+        <BookingConfirmation bookings={bookings}/>
         </Route>
       <Route path='/homes'>
         <Homes homes={homes}/>
