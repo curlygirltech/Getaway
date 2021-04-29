@@ -35,17 +35,18 @@ export default function Nav(props) {
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
-            >
+              >
+              
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
+              
               ShareSpace
             </Typography>
               {currentUser ? (
-              
               <>
                 <p>{currentUser.username}</p>
-                
+                <Button>Logout</Button>
               </>
               ) : (
                 <Button style={{ backgroundColor: "white" }}>
@@ -53,7 +54,14 @@ export default function Nav(props) {
                   Login
                 </Link>
             </Button>
-              )}
+            )}
+            {
+
+              currentUser &&
+            <>
+                <Link>Food</Link>
+            </>
+            }
           </Toolbar>
         </AppBar>
       </div>

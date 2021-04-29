@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Layout from "./Layout/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
-import { loginUser, registerUser, verifyUser } from "./services/auth";
+import { loginUser, registerUser, verifyUser, removeToken } from "./services/auth";
 
 
 function App() {
@@ -33,9 +33,15 @@ function App() {
     history.push("/");
   };
 
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  }
+
   return (
     <div className="App">
-      <Layout currentUser={currentUser} >
+      <Layout currentUser={currentUser} handleLogout={handleLogout} >
         <Switch>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
