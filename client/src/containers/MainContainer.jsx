@@ -2,9 +2,11 @@ import React from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { async } from 'regenerator-runtime';
+import Homes from '../screens/Homes'
 
 import {getAllHomes} from "../services/home"
 import {getAllBookings} from "../services/bookings"
+import Bookings from '../screens/Bookings';
 
 export default function MainContainer(props) {
   const [homes, setHomes] = useState([]);
@@ -36,10 +38,11 @@ export default function MainContainer(props) {
   return (
     
       <Switch>
-        <Route path= '/bookings'>
+      <Route path='/bookings'>
+        <Bookings bookings={bookings}/>
         </Route>
       <Route path='/homes'>
-        <h3>homes</h3>
+        <Homes homes={homes}/>
         </Route>
         <Route path='/users'>
         </Route>
