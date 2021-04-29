@@ -23,7 +23,7 @@ import {Link} from 'react-router-dom'
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    username: '', 
+    username:'', 
     password:''
   })
 
@@ -48,7 +48,7 @@ export default function Login() {
           type='text'
           name='username'
           value={username}
-          OnChange={handleChange}
+          onChange={handleChange}
           />        
         </label>
         
@@ -58,10 +58,10 @@ export default function Login() {
           type='password'
           name='password'
           value={password}
-          OnChange={handleChange}
+          onChange={handleChange}
           />        
         </label>
-        <Link>Register</Link>
+        {/* <Link>Register</Link> */}
         <button>Submit</button>
       </form>
 
