@@ -1,17 +1,25 @@
 import "./App.css";
 import { Route, Switch, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import Nav from './Layout/Nav'
 import Layout from "./Layout/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
-import { loginUser, registerUser } from "./services/auth";
+import { loginUser, registerUser, verifyUser } from "./services/auth";
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
   const history = useHistory();
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser()
+      setCurrentUser(userData)
+    }
+    handleVerify()
+  }, [])
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
@@ -27,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <Layout>
+      <Layout currentUser={currentUser} >
         <Switch>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
