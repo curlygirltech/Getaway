@@ -21,13 +21,14 @@ import {Link} from 'react-router-dom'
 // export default function FormPropsTextFields() {
 //   const classes = useStyles();
 
-export default function Login() {
+export default function Login(props) {
   const [formData, setFormData] = useState({
     username:'', 
     password:''
   })
 
   const { username, password } = formData
+  const { handleLogin } = props
   
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -40,10 +41,13 @@ export default function Login() {
   return (
     // <form className={classes.root} noValidate autoComplete="off"></form>
     <>
-      <form>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+          handleLogin(formData)
+      }}>
         <h3>Login</h3>
         <label>
-          UserName:
+          Username:
         <input
           type='text'
           name='username'
@@ -51,7 +55,7 @@ export default function Login() {
           onChange={handleChange}
           />        
         </label>
-        
+        <br/>
         <label>
           Password:
         <input
@@ -61,7 +65,7 @@ export default function Login() {
           onChange={handleChange}
           />        
         </label>
-        {/* <Link>Register</Link> */}
+        <Link to='/register' >Register</Link>
         <button>Submit</button>
       </form>
 
