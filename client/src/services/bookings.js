@@ -4,7 +4,7 @@ import api from './api-helper'
 
 
 //index
-export const getAllBookings = async () {
+export const getAllBookings = async () => {
   const resp = await api.get('/bookings')
   return resp.data
 }
@@ -31,9 +31,4 @@ export const deleteBooking = async (id) => {
   return resp
 }
 
-  return (
-    <div>
-      
-    </div>
-  )
-
+  

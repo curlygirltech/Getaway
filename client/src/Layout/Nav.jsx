@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Nav(props) {
   const classes = useStyles();
-  const { currentUser } = props;
+  const { currentUser, handleLogout } = props;
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function Nav(props) {
               {currentUser ? (
               <>
                 <p>{currentUser.username}</p>
-                <Button>Logout</Button>
+                <Button onClick={handleLogout}>Logout</Button>
               </>
               ) : (
                 <Button style={{ backgroundColor: "white" }}>
@@ -59,7 +59,7 @@ export default function Nav(props) {
 
               currentUser &&
             <>
-                <Link>Food</Link>
+                <Link>homes</Link>
             </>
             }
           </Toolbar>
