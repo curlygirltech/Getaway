@@ -9,6 +9,9 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Portal from "@material-ui/core/Portal";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -23,7 +26,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Nav(props) {
   const classes = useStyles();
-  const { currentUser } = props;
+  const { currentUser, handleLogout } = props;
+  
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen((prev) => !prev);
+  };
+
+  const handleClickAway = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -35,33 +49,45 @@ export default function Nav(props) {
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
-              >
-              
-              <MenuIcon />
+            >
+              <ClickAwayListener onClickAway={handleClickAway}>
+                <div>
+                  <MenuIcon type="button" onClick={handleClick}>
+                    {/* Open menu dropdown */}
+                  </MenuIcon>
+                  {open ? (
+                    <Portal>
+                      <div className={classes.dropdown}>
+                        <Link to="/homes">Homes</Link>
+                        {currentUser.host? <Link to= '/createhomes'>MyAccount</Link> :
+                          <Link to="/bookingconfirmation">MyAccount</Link>}
+                      </div>
+                    </Portal>
+                  ) : null}
+                </div>
+              </ClickAwayListener>
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              
               ShareSpace
             </Typography>
-              {currentUser ? (
+            {currentUser ? (
               <>
                 <p>{currentUser.username}</p>
-                <Button>Logout</Button>
+            
+                <Button onClick={handleLogout}>Logout</Button>
               </>
-              ) : (
-                <Button style={{ backgroundColor: "white" }}>
+            ) : (
+              <Button style={{ backgroundColor: "white" }}>
                 <Link to="/login" style={{ textDecoration: "none" }}>
                   Login
                 </Link>
-            </Button>
+              </Button>
             )}
-            {
-
-              currentUser &&
-            <>
-                <Link>Food</Link>
-            </>
-            }
+            {currentUser && (
+              <>
+                <Link></Link>
+              </>
+            )}
           </Toolbar>
         </AppBar>
       </div>

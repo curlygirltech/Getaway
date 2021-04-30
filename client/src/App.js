@@ -6,6 +6,7 @@ import Layout from "./Layout/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import { loginUser, registerUser, verifyUser, removeToken } from "./services/auth";
+import MainContainer from "./containers/MainContainer";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+    history.push('/homes')
   }
 
   return (
@@ -48,6 +50,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register handleRegister={ handleRegister } />
+          </Route>
+          <Route path='/'>
+            <MainContainer />
           </Route>
         </Switch>
       </Layout>

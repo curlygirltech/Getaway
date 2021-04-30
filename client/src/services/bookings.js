@@ -4,11 +4,16 @@ import api from './api-helper'
 
 
 //index
-export const getAllBookings = async () {
+export const getAllBookings = async () => {
   const resp = await api.get('/bookings')
   return resp.data
 }
-
+export const getAllUsersBookings = async () => {
+  const token = localStorage.getItem('authToken')
+  api.defaults.headers.common.authorization = `Bearer ${token}`
+  const resp = await api.get(`/bookings/user`)
+  return resp.data
+}
 //show
 export const getOneBooking = async (id) => {
   const resp = await api.get(`/bookings/${id}`);
@@ -31,9 +36,4 @@ export const deleteBooking = async (id) => {
   return resp
 }
 
-  return (
-    <div>
-      
-    </div>
-  )
-
+  
