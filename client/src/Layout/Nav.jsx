@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Nav(props) {
   const classes = useStyles();
   const { currentUser, handleLogout } = props;
+  
 
   const [open, setOpen] = React.useState(false);
 
@@ -52,13 +53,14 @@ export default function Nav(props) {
               <ClickAwayListener onClickAway={handleClickAway}>
                 <div>
                   <MenuIcon type="button" onClick={handleClick}>
-                    Open menu dropdown
+                    {/* Open menu dropdown */}
                   </MenuIcon>
                   {open ? (
                     <Portal>
                       <div className={classes.dropdown}>
                         <Link to="/homes">Homes</Link>
-                        <Link to="/bookingconfirmation">MyAccount</Link>
+                        {currentUser.host? <Link to= '/createhomes'>MyAccount</Link> :
+                          <Link to="/bookingconfirmation">MyAccount</Link>}
                       </div>
                     </Portal>
                   ) : null}
@@ -71,6 +73,7 @@ export default function Nav(props) {
             {currentUser ? (
               <>
                 <p>{currentUser.username}</p>
+            
                 <Button onClick={handleLogout}>Logout</Button>
               </>
             ) : (

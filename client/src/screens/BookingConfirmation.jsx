@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 export default function BookingConfirmation(props) {
   const { bookings } = props;
-  console.log(bookings);
   return (
     <div>
       <h3>Here are your Bookings</h3>
