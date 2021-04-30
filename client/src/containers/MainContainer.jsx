@@ -8,6 +8,7 @@ import {getAllHomes} from "../services/home"
 import {getAllUsersBookings} from "../services/bookings"
 // import Bookings from '../screens/BookingConfirmation';
 import BookingConfirmation from '../screens/BookingConfirmation';
+import EditBooking from '../screens/EditBooking';
 
 export default function MainContainer(props) {
   const [homes, setHomes] = useState([]);
@@ -42,7 +43,10 @@ export default function MainContainer(props) {
       <Switch>
       <Route path='/bookingconfirmation'>
         <BookingConfirmation bookings={bookings}/>
-        </Route>
+      </Route>
+      <Route path= '/booking/:id/edit'>
+        <EditBooking bookings={bookings}/> 
+      </Route>
       <Route path='/homes'>
         <Homes homes={homes}/>
         </Route>

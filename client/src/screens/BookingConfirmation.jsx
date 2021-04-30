@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 export default function BookingConfirmation(props) {
   const { bookings } = props;
@@ -15,7 +16,9 @@ export default function BookingConfirmation(props) {
           {`Your total is $${booking.price}`}
         </p>
           <h3>Change of Plans?</h3>
-          <button>Edit Booking</button>
+          <Link to={`/booking/${booking.id}/edit`}>
+          <button >Edit Booking</button>
+          </Link>
         </React.Fragment>
         
       ))}
