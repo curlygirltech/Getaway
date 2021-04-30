@@ -20,7 +20,7 @@ export default function EditBooking(props) {
     end_date: '',
   })
   const { start_date, end_date } = formData
-  const { bookings, handleEdit } = props
+  const { bookings, handleEdit, handleDelete } = props
   const { id } = useParams()
   
   useEffect(() => {
@@ -75,7 +75,11 @@ export default function EditBooking(props) {
     />
     {/* <Link to="/register">Register</Link> */}
       <button>Submit</button>
-      <button>Delete Booking</button>
+      <button onClick={(e) => {
+        e.preventDefault()
+        handleDelete(id)
+        
+      }}>Delete Booking</button>
   </form>
 );
   

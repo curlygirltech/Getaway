@@ -87,6 +87,7 @@ export default function HomesCreate(props) {
           type="number"
           name="num_beds"
           value={num_beds}
+          onChange={handleChange}
           InputLabelProps={{
             shrink: true,
           }}
@@ -98,6 +99,7 @@ export default function HomesCreate(props) {
           type="number"
           name="num_baths"
           value={num_baths}
+          onChange={handleChange}
           InputLabelProps={{
             shrink: true,
           }}
@@ -109,6 +111,7 @@ export default function HomesCreate(props) {
           type="number"
           name="rate"
           value={rate}
+          onChange={handleChange}
           InputLabelProps={{
             shrink: true,
           }}

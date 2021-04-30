@@ -25,20 +25,20 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push("/");
+    history.push("/homes");
   };
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push("/");
+    history.push("/homes");
   };
 
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
-    history.push('/homes')
+    history.push('/')
   }
 
   return (
