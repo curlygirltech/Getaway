@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Homes from '../screens/Homes'
 
 import {getAllHomes, postHome} from "../services/home"
-import {getAllUsersBookings, putBooking} from "../services/bookings"
+import {deleteBooking, getAllUsersBookings, putBooking} from "../services/bookings"
 // import Bookings from '../screens/BookingConfirmation';
 import BookingConfirmation from '../screens/BookingConfirmation';
 import EditBooking from '../screens/EditBooking';
@@ -45,7 +45,11 @@ export default function MainContainer(props) {
       return bookings.id === Number(id)? bookingData : bookings 
     }))
     history.push('/bookingconfirmation')
-}
+  }
+  const handleDelete = async (id) => {
+    await deleteBooking
+    setHomes(prevState=> prevState.filter(bookings =>bookings.id !== id))
+  }
   return (
     
       <Switch>
@@ -53,7 +57,7 @@ export default function MainContainer(props) {
         <BookingConfirmation bookings={bookings}/>
       </Route>
       <Route path= '/booking/:id/edit'>
-        <EditBooking bookings={bookings} handleEdit={handleEdit}/>
+        <EditBooking bookings={bookings} handleEdit={handleEdit} handleDelete={handleDelete}/>
       </Route>
       <Route path='/createhomes'>
         <HomesCreate handleCreate={handleCreate}/>

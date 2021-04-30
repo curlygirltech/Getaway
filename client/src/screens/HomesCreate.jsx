@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function EditBooking(props) {
+export default function HomesCreate(props) {
   const classes = useStyles();
   const [formData, setFormData] = useState({
     title: "",
