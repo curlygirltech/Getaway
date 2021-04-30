@@ -20,7 +20,7 @@ export default function EditBooking(props) {
     end_date: '',
   })
   const { start_date, end_date } = formData
-  const { bookings } = props
+  const { bookings, handleEdit } = props
   const { id } = useParams()
   
   useEffect(() => {
@@ -49,10 +49,10 @@ export default function EditBooking(props) {
     className={classes.root}
     noValidate
     autoComplete="off"
-    // onSubmit={(e) => {
-    //   e.preventDefault();
-    //   handleLogin(formData);
-    // }}
+    onSubmit={(e) => {
+      e.preventDefault();
+      handleEdit(id, formData);
+    }}
   >
     <TextField
       required
