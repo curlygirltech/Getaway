@@ -23,16 +23,18 @@ export default function EditBooking(props) {
   const { bookings } = props
   const { id } = useParams()
   
-  useEffect(() => {
-    const prefillFormData = () => {
-      const bookingItem = bookings.find(booking => booking.id === id)
-      setFormData({
-        // start_date: bookingItem.start_date,
-        // end_date: bookingItem.end_date
-      })
-    }
-    prefillFormData()
-  },[])
+  // useEffect(() => {
+  //   const prefillFormData = () => {
+  // const bookingItem = bookings.find(booking => booking.id === Number(id))
+  //     setFormData({
+  //       start_date: bookingItem.start_date,
+  //       end_date: bookingItem.end_date
+  //     })
+  // }
+  // if (bookings.length) {
+    //   prefillFormData()
+  // }
+  // },[bookings])
   
   const handleChange = (e) => {
     const {name, value} = e.target

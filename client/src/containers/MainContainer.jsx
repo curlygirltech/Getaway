@@ -1,11 +1,11 @@
 import React from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react'
-import { async } from 'regenerator-runtime';
+
 import Homes from '../screens/Homes'
 
 import {getAllHomes} from "../services/home"
-import {getAllUsersBookings} from "../services/bookings"
+import {getAllUsersBookings, putBooking} from "../services/bookings"
 // import Bookings from '../screens/BookingConfirmation';
 import BookingConfirmation from '../screens/BookingConfirmation';
 import EditBooking from '../screens/EditBooking';
@@ -37,7 +37,12 @@ export default function MainContainer(props) {
   //   const bookingData = await postBooking(formData)
   //   set
   // }
-
+  const handleEdit = async (id, formData) => {
+    const bookingData = await putBooking(id, formData)
+    setBookings(prevState => prevState.map(bookings => {
+      return bookings.id === Number(id)? bookingData : bookings 
+    }))
+}
   return (
     
       <Switch>
@@ -45,7 +50,7 @@ export default function MainContainer(props) {
         <BookingConfirmation bookings={bookings}/>
       </Route>
       <Route path= '/booking/:id/edit'>
-        <EditBooking bookings={bookings}/> 
+        <EditBooking bookings={bookings} handleEdit={handleEdit}/>
       </Route>
       <Route path='/homes'>
         <Homes homes={homes}/>
