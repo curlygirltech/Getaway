@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 import Homes from '../screens/Homes'
 
-import {getAllHomes} from "../services/home"
+import {getAllHomes, postHome} from "../services/home"
 import {getAllUsersBookings, putBooking} from "../services/bookings"
 // import Bookings from '../screens/BookingConfirmation';
 import BookingConfirmation from '../screens/BookingConfirmation';
@@ -35,8 +35,9 @@ export default function MainContainer(props) {
   }, [])
 
   handleCreate = async (formData) => {
-    const HomeData = await postBooking(formData)
-    set
+    const HomeData = await postHome(formData)
+    setHomes(prevState => [...prevState, formData])
+    history.push('/homes')
   }
   const handleEdit = async (id, formData) => {
     const bookingData = await putBooking(id, formData)
