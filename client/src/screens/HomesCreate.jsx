@@ -31,6 +31,8 @@ export default function EditBooking(props) {
   num_baths
   } = formData;
 
+  const {handleCreate} = props
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -49,6 +51,7 @@ export default function EditBooking(props) {
         autoComplete="off"
         onSubmit={(e) => {
           e.preventDefault();
+          handleCreate(formData)
         }}
       >
         <TextField

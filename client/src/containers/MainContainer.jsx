@@ -56,7 +56,7 @@ export default function MainContainer(props) {
         <EditBooking bookings={bookings} handleEdit={handleEdit}/>
       </Route>
       <Route path='/createhomes'>
-      <HomesCreate/>
+        <HomesCreate handleCreate={handleCreate}/>
         </Route>
       <Route path='/homes'>
         <Homes homes={homes}/>
