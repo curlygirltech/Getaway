@@ -17,6 +17,7 @@ puts "#{User.count} users created"
 
 @home = Home.create!(
   user: @host,
+  title: "4 bedroom home",
   img_url:"picture",
   description: "best house ever!",
   rate: 250,
@@ -27,6 +28,7 @@ puts "#{User.count} users created"
 )
 Home.create!(
   user: @host,
+  title: "4 bedroom home",
   img_url:"picture",
   description: "best house ever!",
   rate: 250,

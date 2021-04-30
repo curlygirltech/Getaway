@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authorize_request, only: :user_bookings
   before_action :set_booking, only: [:show, :update, :destroy]
 
   # GET /bookings
@@ -12,6 +13,11 @@ class BookingsController < ApplicationController
   # GET /bookings/1
   def show
     render json: @booking
+  end
+
+  def user_bookings
+    @bookings = Booking.where(user_id: @current_user.id) 
+    render json: @bookings, include: :home
   end
 
   # POST /bookings

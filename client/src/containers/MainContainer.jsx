@@ -9,6 +9,7 @@ import {getAllUsersBookings, putBooking} from "../services/bookings"
 // import Bookings from '../screens/BookingConfirmation';
 import BookingConfirmation from '../screens/BookingConfirmation';
 import EditBooking from '../screens/EditBooking';
+import HomesCreate from '../screens/HomesCreate';
 
 export default function MainContainer(props) {
   const [homes, setHomes] = useState([]);
@@ -33,10 +34,10 @@ export default function MainContainer(props) {
     fetchBookings()
   }, [])
 
-  // handleCreate = async (formData) => {
-  //   const bookingData = await postBooking(formData)
-  //   set
-  // }
+  handleCreate = async (formData) => {
+    const HomeData = await postBooking(formData)
+    set
+  }
   const handleEdit = async (id, formData) => {
     const bookingData = await putBooking(id, formData)
     setBookings(prevState => prevState.map(bookings => {
@@ -53,10 +54,11 @@ export default function MainContainer(props) {
       <Route path= '/booking/:id/edit'>
         <EditBooking bookings={bookings} handleEdit={handleEdit}/>
       </Route>
+      <Route path='/createhomes'>
+      <HomesCreate/>
+        </Route>
       <Route path='/homes'>
         <Homes homes={homes}/>
-        </Route>
-        <Route path='/users'>
         </Route>
       </Switch>
     

@@ -1,6 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,18 +11,108 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-export default function HomesCreate(props) {
+
+export default function EditBooking(props) {
   const classes = useStyles();
   const [formData, setFormData] = useState({
-    title:"",
+    title: "",
     description: "",
+    rate: "",
     img_url: "",
     num_beds: "",
     num_baths: "",
-    rate: ""
   });
-  const { start_date, end_date } = formData;
-  const { bookings, handleCreate } = props;
+  const {
+  title,
+  description,
+  rate,
+  img_url,
+  num_beds,
+  num_baths
+  } = formData;
 
-  return <div></div>;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  return (
+    <>
+      <div>
+        <h3>Host a Home</h3>
+      </div>
+      <form
+        className={classes.root}
+        noValidate
+        autoComplete="off"
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <TextField
+          required
+          id="outlined-start-date"
+          label="Title"
+          name="title"
+          value={title}
+          onChange={handleChange}
+          variant="outlined"
+        />
+        <TextField
+          required
+          id="outlined-start-date"
+          label="Pictures"
+          name="img_url"
+          value={img_url}
+          onChange={handleChange}
+          variant="outlined"
+        />
+        <TextField
+          required
+          id="outlined-start-date"
+          label="Description"
+          name="description"
+          value={description}
+          onChange={handleChange}
+          variant="outlined"
+        />
+        <TextField
+          id="outlined-number"
+          label="Number of bedrooms"
+          type="number"
+          name="num_beds"
+          value={num_beds}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+        <TextField
+          id="outlined-number"
+          label="Number of bathrooms"
+          type="number"
+          name="num_baths"
+          value={num_baths}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+        <TextField
+          id="outlined-number"
+          label="Rate"
+          type="number"
+          name="rate"
+          value={rate}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+        <button>Submit</button>
+      </form>
+    </>
+  );
 }

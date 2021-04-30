@@ -74,7 +74,8 @@ export default function EditBooking(props) {
       variant="outlined"
     />
     {/* <Link to="/register">Register</Link> */}
-    <button>Submit</button>
+      <button>Submit</button>
+      <button>Delete Booking</button>
   </form>
 );
   
