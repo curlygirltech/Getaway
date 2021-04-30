@@ -42,6 +42,7 @@ export default function MainContainer(props) {
     setBookings(prevState => prevState.map(bookings => {
       return bookings.id === Number(id)? bookingData : bookings 
     }))
+    history.push('/bookingconfirmation')
 }
   return (
     
