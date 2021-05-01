@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-import '../screens/Css Screens/mainhomepage.css'
+
 
 import Homes from "../screens/Homes";
 
@@ -16,6 +16,7 @@ import BookingConfirmation from "../screens/BookingConfirmation";
 import EditBooking from "../screens/EditBooking";
 import HomesCreate from "../screens/HomesCreate";
 import HomeDetail from "../screens/HomeDetail";
+import MainHomepage from "../screens/MainHomepage";
 
 export default function MainContainer(props) {
   const [homes, setHomes] = useState([]);
@@ -79,6 +80,9 @@ export default function MainContainer(props) {
       </Route>
       <Route path="/homes">
         <Homes homes={homes} />
+      </Route>
+      <Route path='/'>
+        <MainHomepage/>
       </Route>
     </Switch>
   );
