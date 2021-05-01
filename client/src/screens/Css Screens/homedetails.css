@@ -1,0 +1,16 @@
+.home-detail {
+  display: flex;
+}
+
+.title {
+}
+
+.description {
+  font-family: 'Comic Neue', cursive;
+  
+}
+
+.home-images {
+  height: 350px;
+  width: 350px;
+}

@@ -18,7 +18,7 @@ puts "#{User.count} users created"
 @home = Home.create!(
   user: @host,
   title: "4 bedroom home",
-  img_url:"picture",
+  img_url:"https://images.unsplash.com/photo-1603622476630-90b1707bedfb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
   description: "best house ever!",
   rate: 250,
   num_beds: 5,
@@ -26,19 +26,20 @@ puts "#{User.count} users created"
   avg_rating: 3
 
 )
-Home.create!(
+@home = Home.create!(
   user: @host,
   title: "4 bedroom home",
-  img_url:"picture",
+  img_url:"https://images.unsplash.com/photo-1590725400160-32050bff94e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
   description: "best house ever!",
   rate: 250,
   num_beds: 5,
   num_baths: 6,
   avg_rating: 3
 )
-Home.create!(
+@home = Home.create!(
+  title: "Cozy Cabin in the Woods"
   user: @host,
-  img_url:"picture",
+  img_url:"https://images.unsplash.com/photo-1604210565264-8917562a63d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
   description: "best house ever!",
   rate: 250,
   num_beds: 5,
@@ -46,18 +47,20 @@ Home.create!(
   avg_rating: 3
 )
 
-Home.create!(
+@home = Home.create!(
+  title: "Romantic Cabin Getaway"
   user: @host,
-  img_url:"picture",
+  img_url:"https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80",
   description: "best house ever!",
   rate: 250,
   num_beds: 5,
   num_baths: 6,
   avg_rating: 3
 )
-Home.create!(
+@home = Home.create!(
+  title: "Spacious Family Cabin"
   user: @host,
-  img_url:"picture",
+  img_url:"https://images.unsplash.com/photo-1601919051950-bb9f3ffb3fee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
   description: "best house ever!",
   rate: 250,
   num_beds: 5,

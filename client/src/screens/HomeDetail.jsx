@@ -19,16 +19,16 @@ export default function HomeDetail(props) {
     }
   },[homes, id])
   return (
-    <div>
-      <h3>Home Detail</h3>
-      <p>
+    <div classname="home-detail">
+      <h3 className="title">{home?.title}</h3>
+      <p classname= "description"> 
           {home?.description}
           {`rate $${home?.rate}`}
         </p>
           <img className= "home-images"
         src={home?.img_url}
       />
-     
+    
     </div>
   )
 }

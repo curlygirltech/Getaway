@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
+import '../screens/Css Screens/mainhomepage.css'
 
 import Homes from "../screens/Homes";
 

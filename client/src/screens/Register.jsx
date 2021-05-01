@@ -37,7 +37,7 @@ export default function Register(props) {
 
   return (
     <form
-      className={classes.root}
+      className="register-form"
       noValidate
       autoComplete="off"
       onSubmit={(e) => {
@@ -57,7 +57,7 @@ export default function Register(props) {
 
 <TextField
         required
-        id="outlined-required"
+        className="outlined-required"
         label="Email"
         name="email"
         value={email}
@@ -67,7 +67,7 @@ export default function Register(props) {
 
       <TextField
         required
-        id="outlined-password-input"
+        className="outlined-required"
         label="Password"
         type="password"
         autoComplete="current-password"
