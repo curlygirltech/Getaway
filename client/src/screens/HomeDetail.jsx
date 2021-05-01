@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
+import '../screens/Css Screens/homedetails.css'
+
 
 export default function HomeDetail(props) {
   const [home, setHome] = useState(null)
@@ -26,14 +28,7 @@ export default function HomeDetail(props) {
           <img className= "home-images"
         src={home?.img_url}
       />
-      <form>
-        <input type="text"
-          value=
-        />
-        <input type="text"
-          value=
-        />
-      </form>
+     
     </div>
   )
 }

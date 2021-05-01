@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from 'react'
-import './homestyles.css'
+import '../screens/Css Screens/homestyles.css'
+
 
 export default function Homes(props) {
   const { homes } = props;

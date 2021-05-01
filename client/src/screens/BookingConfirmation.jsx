@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../screens/Css Screens/bookingconfirmation.css'
+
 
 export default function BookingConfirmation(props) {
   const { bookings } = props;
