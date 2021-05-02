@@ -1,0 +1,28 @@
+.homes-parent-div{
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-gap: 50px 50px; */
+  justify-content: center;
+
+}
+.home-images{
+  max-width: 250px;
+  /* object-fit: contain; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-card {
+  padding: 30px;
+  justify-content: center;
+  width:400px;
+}
+.middle {
+  margin: 10px;
+  color:white;
+  font-size: 20px;
+  padding: 8px;
+  flex-flow: row-wrap;
+  background-color: #202124;
+  border:#EBEBEB 0.5px solid;
+  width: 300px;
+}

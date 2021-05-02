@@ -13,6 +13,7 @@ export const getAllUsersBookings = async () => {
   api.defaults.headers.common.authorization = `Bearer ${token}`
   const resp = await api.get(`/bookings/user`)
   return resp.data
+
 }
 //show
 export const getOneBooking = async (id) => {
@@ -22,6 +23,7 @@ export const getOneBooking = async (id) => {
 }
 //create
 export const postBooking = async (bookingData) => {
+  console.log( { booking: bookingData })
   const resp = await api.post('/bookings', { booking: bookingData })
   return resp.data
 }
@@ -32,8 +34,9 @@ export const putBooking = async (id, bookingData) => {
 }
 //delete
 export const deleteBooking = async (id) => {
-  const resp = await api.delete(`/bookings/${id}`)
-  return resp
+  console.log(id)
+  await api.delete(`/bookings/${id}`)
+  
 }
 
   
