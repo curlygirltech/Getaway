@@ -9,14 +9,17 @@ export default function Homes(props) {
       <h3> browse homes</h3>
       {homes.map((home) => (
         <React.Fragment key={home.id}>
-          <Link to={`/homes/${home.id}`}>
+          <div className= "home-card">
+            <Link to={`/homes/${home.id}`}>
+              <div className= "middle">
+
             <h3>{home.title}</h3>
-            <p>
-              {home.description}
-              {`rate $${home.rate}`}
+            <p>{`rate $${home.rate}`}
             </p>
             <img className="home-images" src={home.img_url} />
+              </div>
           </Link>
+          </div>
         </React.Fragment>
       ))}
     </div>

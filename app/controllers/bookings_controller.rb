@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :authorize_request, only: :user_bookings
-  before_action :set_booking, only: [:show, :update, :destroy]
+  before_action :set_booking, only: [:show, :create, :update, :destroy]
 
   # GET /bookings
   def index
@@ -54,7 +54,7 @@ class BookingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
       @booking = Booking.find(params[:id])
-      puts 'deleted!!!'
+      
       puts @booking
     end
 

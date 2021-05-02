@@ -23,7 +23,7 @@ export default function HomeDetail(props) {
   })
   const [home, setHome] = useState(null)
   const { start_date, end_date } = formData
-  const { homes, handleEdit } = props
+  const { homes, handleCreateBooking } = props
   const {id} = useParams()
   
   useEffect(() => {
@@ -45,45 +45,49 @@ export default function HomeDetail(props) {
   }
   return (
     <div classname="home-detail">
-      <h3 className="title">{home?.title}</h3>
-      <p classname= "description"></p> 
-          {home?.description}
+      <div className='home-detail-card'>
+        <div className="title">{home?.title}</div>
           <p>{`rate $${home?.rate}`}</p>
           <img className= "home-images"
         src={home?.img_url}
-      />
+        />
+        <p classname="description">
+          {home?.description}
+        </p>
       <form
-    className={classes.root}
+    className="booking-form"
     noValidate
     autoComplete="off"
     onSubmit={(e) => {
-      // e.preventDefault();
-      // handleEdit(id, formData);
+      e.preventDefault();
+      handleCreateBooking(id, formData);
     }}
-  >
+    >
     <TextField
       required
-      id="outlined-start-date"
+      className= "input"
       label="start_date"
       name="start_date"
       value={start_date}
       onChange={handleChange}
       variant="outlined"
-    />
+      />
 
     <TextField
       required
-      id="outlined-end-date-input"
+      className="input"
       label="end_date"
       name="end_date"
       value={end_date}
       onChange={handleChange}
       variant="outlined"
-    />
-        <Link to='/bookingconfirmation'>
+      />
+        <div className="book-button">
       <button>Book</button>
-        </Link>
+        </div>
+        
     </form>
+      </div>
     </div>
   )
 }

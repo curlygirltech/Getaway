@@ -9,6 +9,7 @@ import { getAllHomes, postHome } from "../services/home";
 import {
   deleteBooking,
   getAllUsersBookings,
+  postBooking,
   putBooking,
 } from "../services/bookings";
 // import Bookings from '../screens/BookingConfirmation';
@@ -26,8 +27,8 @@ export default function MainContainer(props) {
 
   useEffect(() => {
     const fetchHomes = async () => {
-      const HomeData = await getAllHomes();
-      setHomes(HomeData);
+      const homeData = await getAllHomes();
+      setHomes(homeData);
     };
     fetchHomes();
   }, []);
@@ -41,10 +42,25 @@ export default function MainContainer(props) {
   }, []);
 
   const handleCreate = async (formData) => {
-    const HomeData = await postHome(formData);
+    const homeData = await postHome(formData);
     setHomes((prevState) => [...prevState, formData]);
     history.push("/homes");
   };
+
+
+  const handleCreateBooking = async (id, formData) => {
+    const bookingData = await postBooking(id, formData);
+    setHomes((prevState) => [...prevState, formData]);
+    history.push("/bookingconfirmation");
+  };
+
+
+
+
+
+
+
+
   const handleEdit = async (id, formData) => {
     const bookingData = await putBooking(id, formData);
     setBookings((prevState) =>
@@ -76,7 +92,7 @@ export default function MainContainer(props) {
         <HomesCreate handleCreate={handleCreate} />
       </Route>
       <Route path="/homes/:id">
-        <HomeDetail homes={homes} />
+        <HomeDetail homes={homes} handleCreateBooking={handleCreateBooking}/>
       </Route>
       <Route path="/homes">
         <Homes homes={homes} />
