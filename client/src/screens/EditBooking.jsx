@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../screens/Css Screens/editbooking.css";
+
 
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
@@ -79,7 +81,6 @@ export default function EditBooking(props) {
       <button>Submit</button>
       </div>
       <div className ="delete-button">
-
       <button
         onClick={(e) => {
           e.preventDefault();
