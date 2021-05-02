@@ -6,7 +6,9 @@ export default function Homes(props) {
   const { homes } = props;
   return (
       <div>
-        <h3> browse homes</h3>
+      <div className ="browse-homes-heading">
+      <h3>Luxury Cabins a Click Away</h3>
+      </div>
     <div className="homes-parent-div">
       {homes.map((home) => (
         <React.Fragment key={home.id}>

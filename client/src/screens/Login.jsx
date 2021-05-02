@@ -36,7 +36,10 @@ export default function Login(props) {
   };
 
   return (
+    <div className="login-background">
+<div>
     <form
+    
       className="login-form"
       noValidate
       autoComplete="off"
@@ -68,10 +71,12 @@ export default function Login(props) {
         onChange={handleChange}
         variant="outlined"
       />
-      <Link to="/register">Register</Link>
+      <Link to="/register">Create an Account</Link>
       <div className="login-button">
       <button>Submit</button>
       </div>
-    </form>
+      </form>
+      </div>
+    </div>
   );
 }

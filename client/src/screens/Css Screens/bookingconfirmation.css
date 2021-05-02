@@ -8,7 +8,10 @@
   width: 650px;
   border-radius: 20px;
   color: white;
-  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
   padding: 15px;
 }
 .title {
@@ -39,7 +42,7 @@
 }
 .booking-card > img {
   margin: 20px;
-  height: 600px;
+  height: 400px;
   width: 300px;
 }
 .edit-button >a >button{
@@ -56,4 +59,5 @@
   font-size: 1rem;
   padding: 0.6em 1em;
   border-radius: 3px;
+  margin-bottom: 15px;
 }
