@@ -75,15 +75,20 @@ export default function EditBooking(props) {
         variant="outlined"
       />
       {/* <Link to="/register">Register</Link> */}
+      <div className="edit-submit">
       <button>Submit</button>
+      </div>
+      <div className ="delete-button">
+
       <button
         onClick={(e) => {
           e.preventDefault();
           handleDelete(id);
         }}
-      >
+        >
         Delete Booking
       </button>
+        </div>
     </form>
   );
 }
