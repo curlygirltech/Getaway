@@ -5,8 +5,9 @@ import "../screens/Css Screens/homestyles.css";
 export default function Homes(props) {
   const { homes } = props;
   return (
-    <div>
-      <h3> browse homes</h3>
+      <div>
+        <h3> browse homes</h3>
+    <div className="homes-parent-div">
       {homes.map((home) => (
         <React.Fragment key={home.id}>
           <div className= "home-card">
@@ -23,5 +24,6 @@ export default function Homes(props) {
         </React.Fragment>
       ))}
     </div>
+      </div>
   );
 }
