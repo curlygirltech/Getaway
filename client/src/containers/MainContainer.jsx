@@ -33,11 +33,11 @@ export default function MainContainer(props) {
     fetchHomes();
   }, []);
 
+  const fetchBookings = async () => {
+    const bookingData = await getAllUsersBookings();
+    setBookings(bookingData);
+  };
   useEffect(() => {
-    const fetchBookings = async () => {
-      const bookingData = await getAllUsersBookings();
-      setBookings(bookingData);
-    };
     fetchBookings();
   }, []);
 
@@ -48,9 +48,10 @@ export default function MainContainer(props) {
   };
 
 
-  const handleCreateBooking = async (id, formData) => {
-    const bookingData = await postBooking(id, formData);
+  const handleCreateBooking = async (formData) => {
+    const bookingData = await postBooking(formData);
     setHomes((prevState) => [...prevState, formData]);
+    fetchBookings()
     history.push("/bookingconfirmation");
   };
 
@@ -67,12 +68,14 @@ export default function MainContainer(props) {
       prevState.map((bookings) => {
         return bookings.id === Number(id) ? bookingData : bookings;
       })
-    );
+      );
+      fetchBookings()
     history.push("/bookingconfirmation");
   };
   const handleDelete = async (id) => {
     await deleteBooking(id);
     setHomes((prevState) => prevState.filter((bookings) => bookings.id !== id));
+    fetchBookings()
     history.push("/bookingconfirmation");
   };
 

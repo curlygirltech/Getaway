@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :authorize_request, only: :user_bookings
-  before_action :set_booking, only: [:show, :create, :update, :destroy]
+  before_action :authorize_request, only: [:user_bookings, :create]
+  before_action :set_booking, only: [:show, :update, :destroy]
 
   # GET /bookings
   def index
@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   # POST /bookings
   def create
     @booking = Booking.new(booking_params)
-
+    @booking.user = @current_user
     if @booking.save
       render json: @booking, status: :created
     else

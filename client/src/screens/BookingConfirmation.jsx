@@ -13,9 +13,9 @@ export default function BookingConfirmation(props) {
           <React.Fragment key={booking.id}>
             <div className="title">{booking.home?.title }</div>
             <div className= "date">{booking.start_date} to {booking.end_date}</div>
-            <div className="description">{booking.home?.description}</div>
             <div className="price">{`Your total is $${booking.price}`}</div>
             <img src={booking.home?.img_url} />
+            <div className="description">{booking.home?.description}</div>
             <div classname="edit"><h3>Change of Plans?</h3></div>
             <div className="edit-button">
             <Link to={`/booking/${booking.id}/edit`}>

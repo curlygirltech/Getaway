@@ -23,6 +23,7 @@ export const getOneBooking = async (id) => {
 }
 //create
 export const postBooking = async (bookingData) => {
+  console.log( { booking: bookingData })
   const resp = await api.post('/bookings', { booking: bookingData })
   return resp.data
 }

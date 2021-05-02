@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: #202124;
-  height: 600px;
+  /* height: 600px; */
   width: 650px;
   border-radius: 20px;
   color: white;
@@ -20,18 +20,26 @@
   font-size: 28px;
 }
 .price {
+  font-family: 'Comic Neue', cursive;
+
 }
 .description {
   padding: 10px;
   letter-spacing: 0.9px;
+  font-family: 'Comic Neue', cursive;
+  padding: 5px, 10px;
+  margin:10px;
+  justify-content: center;
 }
+
 .edit > h3 {
+  font-family: 'Comic Neue', cursive;
   padding: 15px;
   margin: 20px;
 }
 .booking-card > img {
   margin: 20px;
-  height: 300px;
+  height: 600px;
   width: 300px;
 }
 .edit-button >a >button{
