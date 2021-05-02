@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import '../screens/Css Screens/register.css'
-
+import "../screens/Css Screens/register.css";
 
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,7 +19,7 @@ export default function Register(props) {
   const classes = useStyles();
   const [formData, setFormData] = useState({
     username: "",
-    email:'',
+    email: "",
     password: "",
   });
 
@@ -55,7 +54,7 @@ export default function Register(props) {
         variant="outlined"
       />
 
-<TextField
+      <TextField
         required
         className="outlined-required"
         label="Email"
@@ -76,8 +75,9 @@ export default function Register(props) {
         onChange={handleChange}
         variant="outlined"
       />
-      
-      <button>Submit</button>
+      <div className="register-button">
+        <button>Submit</button>
+      </div>
     </form>
   );
 }

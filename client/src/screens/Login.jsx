@@ -11,7 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
-      margin: theme.spacing(2),
+      margin: theme.spacing(3),
       width: "25ch",
     },
   },
@@ -37,27 +37,29 @@ export default function Login(props) {
 
   return (
     <form
-      className={classes.root}
+      className="login-form"
       noValidate
       autoComplete="off"
       onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}
+      
     >
       <TextField
         required
-        id="outlined-required"
+        className="outlined-required"
         label="Username"
         name="username"
         value={username}
         onChange={handleChange}
         variant="outlined"
+        
       />
 
       <TextField
         required
-        id="outlined-password-input"
+        className="outlined-required"
         label="Password"
         type="password"
         autoComplete="current-password"
@@ -67,7 +69,9 @@ export default function Login(props) {
         variant="outlined"
       />
       <Link to="/register">Register</Link>
+      <div className="login-button">
       <button>Submit</button>
+      </div>
     </form>
   );
 }

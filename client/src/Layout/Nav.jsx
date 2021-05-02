@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  // dropdown: {
+  //   flexDirection: column
+  // }
 }));
 
 export default function Nav(props) {
@@ -91,9 +94,6 @@ export default function Nav(props) {
           </Toolbar>
         </AppBar>
       </div>
-      {/* <div>
-      <Link to='/login'>Login</Link>
-    </div> */}
     </>
   );
 }
