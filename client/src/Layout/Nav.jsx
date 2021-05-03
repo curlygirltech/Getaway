@@ -55,7 +55,7 @@ export default function Nav(props) {
               <ClickAwayListener onClickAway={handleClickAway}>
                 <div>
                   <MenuIcon type="button" onClick={handleClick}>
-                    {/* Open menu dropdown */}
+                    Open menu dropdown
                   </MenuIcon>
                   {open ? (
                     <Portal>

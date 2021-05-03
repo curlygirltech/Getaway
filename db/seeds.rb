@@ -174,8 +174,8 @@ puts "#{Home.count} homes created"
 
 
 
-@booking = Booking.create!(user:@guest, home:@home, start_date: DateTime.parse("05/01/2021 09:00"),end_date: DateTime.parse("05/05/2021 18:00"), price:350)
-@booking = Booking.create!(user:@jovi, home:@home, start_date: DateTime.parse("05/01/2021 09:00"),end_date: DateTime.parse("05/05/2021 18:00"), price:350)
+@booking = Booking.create!(user:@guest, home:@home, start_date: DateTime.parse("05/01/2021 09:00"),end_date: DateTime.parse("05/05/2021 18:00"), rate:350)
+@booking = Booking.create!(user:@jovi, home:@home, start_date: DateTime.parse("05/01/2021 09:00"),end_date: DateTime.parse("06/05/2021 18:00"), rate:350)
 
 puts "#{Booking.count} bookings created"
 
