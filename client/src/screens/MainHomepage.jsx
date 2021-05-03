@@ -7,7 +7,7 @@ export default function MainHomepage() {
     <div className="background">
 
     <div className="intro">
-      <h1>Your Home Away from Home</h1>
+      <h4>Your Home Away from Home</h4>
       <div className="intro-buttons">
         <Link to="/login">
           <button>Let's Getaway</button>

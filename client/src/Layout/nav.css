@@ -1,0 +1,11 @@
+.dropdown{
+  display:flex; 
+}
+.dropdown> a{
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+.title-nav{
+  color:white;
+}

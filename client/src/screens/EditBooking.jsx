@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../screens/Css Screens/editbooking.css";
+
 
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
@@ -55,7 +57,7 @@ export default function EditBooking(props) {
     >
       <TextField
         required
-        id="outlined-start-date"
+        className="edit-date-input"
         type="date"
         label="start_date"
         name="start_date"
@@ -67,7 +69,7 @@ export default function EditBooking(props) {
       <TextField
         required
         type="date"
-        id="outlined-end-date-input"
+        className="edit-date-input"
         label="end_date"
         name="end_date"
         value={end_date}
@@ -75,15 +77,19 @@ export default function EditBooking(props) {
         variant="outlined"
       />
       {/* <Link to="/register">Register</Link> */}
+      <div className="edit-submit">
       <button>Submit</button>
+      </div>
+      <div className ="delete-button">
       <button
         onClick={(e) => {
           e.preventDefault();
           handleDelete(id);
         }}
-      >
+        >
         Delete Booking
       </button>
+        </div>
     </form>
   );
 }

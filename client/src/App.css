@@ -10,6 +10,21 @@ p{
   font-family: 'Comic Neue', cursive;
 
 }
+/* button{
+
+  font-size: 22px;
+    height: 40px;
+    width: 200px;
+    margin-top: 40px;
+    background-color: none;
+    color: black;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.6em 1em;
+    border-radius: 3px;
+} */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126

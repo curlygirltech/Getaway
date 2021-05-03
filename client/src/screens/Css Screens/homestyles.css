@@ -5,6 +5,10 @@
   justify-content: center;
 
 }
+.browse-homes-heading>h3{
+  font-size: 34px;
+  color: white;
+}
 .home-images{
   max-width: 250px;
   /* object-fit: contain; */
