@@ -7,7 +7,8 @@ export default function BookingConfirmation(props) {
   console.log(bookings);
   return (
     <div>
-      <h3>Here are your Bookings</h3>
+      <div className= "bookings-heading"><h3>Here are your Bookings</h3>
+      </div>
       <div className="booking-card">
         {bookings.map((booking) => (
           <React.Fragment key={booking.id}>

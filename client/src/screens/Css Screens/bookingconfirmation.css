@@ -34,7 +34,10 @@
   margin:10px;
   justify-content: center;
 }
-
+.bookings-heading >h3 {
+  font-size: 40px;
+  color:white;
+}
 .edit > h3 {
   font-family: 'Comic Neue', cursive;
   padding: 15px;

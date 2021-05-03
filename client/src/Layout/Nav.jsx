@@ -60,6 +60,7 @@ export default function Nav(props) {
                   {open ? (
                     <Portal>
                       <div className="dropdown">
+                        <Link to="/">Sharespace</Link>
                         <Link to="/homes">Homes</Link>
                         {currentUser.host ? (
                           <Link to="/createhomes">MyAccount</Link>
