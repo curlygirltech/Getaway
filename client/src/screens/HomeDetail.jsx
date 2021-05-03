@@ -141,9 +141,10 @@ export default function HomeDetail(props) {
               </Fade>
             </Modal>
           </div>
-          );
+          
         </form>
       </div>
     </div>
+  )
 }
 
