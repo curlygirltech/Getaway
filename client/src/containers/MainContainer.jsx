@@ -52,7 +52,7 @@ export default function MainContainer(props) {
     const bookingData = await postBooking(formData);
     setHomes((prevState) => [...prevState, formData]);
     fetchBookings()
-    history.push("/bookingconfirmation");
+    // history.push("/bookingconfirmation");
   };
 
 
