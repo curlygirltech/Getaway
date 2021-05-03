@@ -96,7 +96,7 @@ puts "#{User.count} users created"
   user: @host,
   img_url:"https://images.unsplash.com/photo-1601919051950-bb9f3ffb3fee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
   description: "From the outside this house looks warm and cozy. It has been built with spruce wood and has granite decorations. Tall, rectangular windows allow enough light to enter the home and have been added to the house in a very asymmetric way.
-
+–
   The house is equipped with an average kitchen and one large bathroom, it also has a generous living room, two bedrooms, a small dining area, a bar and a modest garage.
   
   The building is square shaped. The house is fully surrounded by stylish gardens.
@@ -114,7 +114,7 @@ puts "#{User.count} users created"
 @home = Home.create!(
   user: @host,
   title: "Luxury Cabin in the Mountains",
-  img_url:"https://images.unsplash.com/photo-1603622476630-90b1707bedfb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
+  img_url:"https://images.unsplash.com/photo-1590725121839-892b458a74fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80",
   description: "From the outside this house looks magnificent. It has been built with white bricks and has oak wooden decorations. Tall, squared windows brighten up the house and have been added to the house in a mostly asymmetric way.
 
   The house is equipped with an old-fashioned kitchen and two modern bathrooms, it also has a large living room, three bedrooms, a snug dining room and a modest basement.
@@ -133,19 +133,18 @@ puts "#{User.count} users created"
 
 @home = Home.create!(
   user: @host,
-  title: "6 Bedroom Home near Lakehouse",
-  img_url:"https://unsplash.com/photos/6FZf3yzuodE"
-  description: "From the outside this house looks magnificent. It has been built with white bricks and has oak wooden decorations. Tall, squared windows brighten up the house and have been added to the house in a mostly asymmetric way.
+  title: "Modern 7 bedroom Cabin perfect for Families",
+  img_url:"https://images.unsplash.com/photo-1550355191-aa8a80b41353?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
+  description: "From the outside this house looks luxurious. It has been built with white bricks and has cypress wooden decorations. Tall, wide windows brighten up the house and have been added to the house in a mostly symmetric way.
 
-  The house is equipped with an old-fashioned kitchen and two modern bathrooms, it also has a large living room, three bedrooms, a snug dining room and a modest basement.
+  The house is equipped with an average kitchen and one large bathroom, it also has a large living room, five bedrooms, a grand dining room, a sun room and a spacious storage room.
   
-  The building is square shaped. The house is half surrounded by a covered patio.
-  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor follows the same style as the floor below.
+  The building is shaped like a T. The two extensions extend into cloth sunscreens reaching until the end of that side of the house.
+  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor has a very different style than the floor below.
   
-  The roof is flat and is covered with overlapping roof tiles. One large chimney pokes out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
-  The house itself is surrounded by a modest garden, with mostly grass, a few flower patches and a children's playground.",
-  rate: 250,
-  num_beds: 5,
+  The roof is low and rounded and is covered with seagrass. Two large chimneys sit at the side of the house. There are no windows on the roof.
+  The house itself is surrounded by a modest garden, covered mostly in grass, a few flower patches and with a small pond.",
+  num_beds: 7,
   num_baths: 6,
   avg_rating: 3
 
@@ -153,19 +152,19 @@ puts "#{User.count} users created"
 
 @home = Home.create!(
   user: @host,
-  title: "6 Bedroom Home near Lakehouse",
-  img_url:"https://images.unsplash.com/photo-1603622476630-90b1707bedfb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
-  description: "From the outside this house looks magnificent. It has been built with white bricks and has oak wooden decorations. Tall, squared windows brighten up the house and have been added to the house in a mostly asymmetric way.
+  title: "Unique Modern Cabin with hot tub",
+  img_url:"https://images.unsplash.com/photo-1610928290695-64e621f6a2f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+  description: "From the outside this house looks lavish. It has been built with bricks covered in render and has blue stone decorations. Small, triangular windows add to the overall style of the house and have been added to the house in a fairly asymmetrical pattern.
 
-  The house is equipped with an old-fashioned kitchen and two modern bathrooms, it also has a large living room, three bedrooms, a snug dining room and a modest basement.
+  The house is equipped with an old-fashioned kitchen and one large bathroom, it also has a snug living room, three bedrooms, a roomy dining room, a study and a modest storage room.
   
-  The building is square shaped. The house is half surrounded by a covered patio.
-  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor follows the same style as the floor below.
+  The building is shaped like a squared S. The two extensions extend into stylish gardens to each side.
+  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor has a very different style than the floor below.
   
-  The roof is flat and is covered with overlapping roof tiles. One large chimney pokes out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
-  The house itself is surrounded by a modest garden, with mostly grass, a few flower patches and a children's playground.",
+  The roof is low and pyramid shaped and is covered with black ceramic tiles. Two small chimneys poke out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
+  The house itself is surrounded by a well kept garden. Grass, flower patches and trees have been placed in a stylish way.",
   rate: 250,
-  num_beds: 5,
+  num_beds: 4,
   num_baths: 6,
   avg_rating: 3
 
