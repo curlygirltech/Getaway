@@ -57,7 +57,7 @@ export default function EditBooking(props) {
     >
       <TextField
         required
-        id="outlined-start-date"
+        className="edit-date-input"
         type="date"
         label="start_date"
         name="start_date"
@@ -69,7 +69,7 @@ export default function EditBooking(props) {
       <TextField
         required
         type="date"
-        id="outlined-end-date-input"
+        className="edit-date-input"
         label="end_date"
         name="end_date"
         value={end_date}

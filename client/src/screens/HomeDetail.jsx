@@ -1,16 +1,14 @@
-import React from 'react'
-import { useEffect, useState, } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../screens/Css Screens/homedetails.css";
 
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 
-
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
-
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,18 +18,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: "2px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
 }));
-// }));
+
 
 export default function HomeDetail(props) {
   const classes = useStyles();
@@ -62,9 +60,6 @@ export default function HomeDetail(props) {
     }));
   };
 
-
-
-
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -74,12 +69,6 @@ export default function HomeDetail(props) {
   const handleClose = () => {
     setOpen(false);
   };
-
-
-
-
-
-
 
   return (
     <div classname="home-detail">
@@ -96,7 +85,7 @@ export default function HomeDetail(props) {
           autoComplete="off"
           onSubmit={(e) => {
             e.preventDefault();
-            handleOpen()
+            handleOpen();
             console.log(formData);
             const start_date = new Date(formData.start_date);
             const end_date = new Date(formData.end_date);
@@ -110,18 +99,15 @@ export default function HomeDetail(props) {
             required
             type="date"
             className="input"
-            // label="start_date"
             name="start_date"
             value={start_date}
             onChange={handleChange}
             variant="outlined"
           />
-
           <TextField
             required
             type="date"
             className="input"
-            // label="end_date"
             name="end_date"
             value={end_date}
             onChange={handleChange}
@@ -131,29 +117,33 @@ export default function HomeDetail(props) {
             <button>Book</button>
           </div>
           <div>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <div className={classes.paper}>
-            <h2 id="transition-modal-title">Your booking is confirmed</h2>
-            <p id="transition-modal-description">Edit your booking in your account</p>
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              className={classes.modal}
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+              <Fade in={open}>
+                <div className={classes.paper}>
+                  <h2 id="transition-modal-title">
+                    Your booking is confirmed!
+                  </h2>
+                  <p id="transition-modal-description">
+                    You can edit your booking in your account
+                  </p>
+                </div>
+              </Fade>
+            </Modal>
           </div>
-        </Fade>
-      </Modal>
-    </div>
-  );
+          );
         </form>
       </div>
     </div>
-  );
 }
+
