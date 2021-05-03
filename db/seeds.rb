@@ -144,6 +144,7 @@ puts "#{User.count} users created"
   
   The roof is low and rounded and is covered with seagrass. Two large chimneys sit at the side of the house. There are no windows on the roof.
   The house itself is surrounded by a modest garden, covered mostly in grass, a few flower patches and with a small pond.",
+  rate: 550,
   num_beds: 7,
   num_baths: 6,
   avg_rating: 3
@@ -163,7 +164,7 @@ puts "#{User.count} users created"
   
   The roof is low and pyramid shaped and is covered with black ceramic tiles. Two small chimneys poke out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
   The house itself is surrounded by a well kept garden. Grass, flower patches and trees have been placed in a stylish way.",
-  rate: 250,
+  rate: 300,
   num_beds: 4,
   num_baths: 6,
   avg_rating: 3

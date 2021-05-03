@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Nav(props) {
   const classes = useStyles();
   const { currentUser, handleLogout } = props;
-  
 
   const [open, setOpen] = React.useState(false);
 
@@ -62,8 +61,11 @@ export default function Nav(props) {
                     <Portal>
                       <div className="dropdown">
                         <Link to="/homes">Homes</Link>
-                        {currentUser.host? <Link to= '/createhomes'>MyAccount</Link> :
-                          <Link to="/bookingconfirmation">MyAccount</Link>}
+                        {currentUser.host ? (
+                          <Link to="/createhomes">MyAccount</Link>
+                        ) : (
+                          <Link to="/bookingconfirmation">MyAccount</Link>
+                        )}
                       </div>
                     </Portal>
                   ) : null}
@@ -71,14 +73,12 @@ export default function Nav(props) {
               </ClickAwayListener>
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              <Link to= '/homes'>
               ShareSpace
-              </Link>
             </Typography>
             {currentUser ? (
               <>
                 <p>{currentUser.username}</p>
-            
+
                 <Button onClick={handleLogout}>Logout</Button>
               </>
             ) : (
