@@ -110,6 +110,66 @@ puts "#{User.count} users created"
   avg_rating: 3
 
 )
+
+@home = Home.create!(
+  user: @host,
+  title: "Luxury Cabin in the Mountains",
+  img_url:"https://images.unsplash.com/photo-1603622476630-90b1707bedfb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
+  description: "From the outside this house looks magnificent. It has been built with white bricks and has oak wooden decorations. Tall, squared windows brighten up the house and have been added to the house in a mostly asymmetric way.
+
+  The house is equipped with an old-fashioned kitchen and two modern bathrooms, it also has a large living room, three bedrooms, a snug dining room and a modest basement.
+  
+  The building is square shaped. The house is half surrounded by a covered patio.
+  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor follows the same style as the floor below.
+  
+  The roof is flat and is covered with overlapping roof tiles. One large chimney pokes out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
+  The house itself is surrounded by a modest garden, with mostly grass, a few flower patches and a children's playground.",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+
+)
+
+@home = Home.create!(
+  user: @host,
+  title: "6 Bedroom Home near Lakehouse",
+  img_url:"https://unsplash.com/photos/6FZf3yzuodE"
+  description: "From the outside this house looks magnificent. It has been built with white bricks and has oak wooden decorations. Tall, squared windows brighten up the house and have been added to the house in a mostly asymmetric way.
+
+  The house is equipped with an old-fashioned kitchen and two modern bathrooms, it also has a large living room, three bedrooms, a snug dining room and a modest basement.
+  
+  The building is square shaped. The house is half surrounded by a covered patio.
+  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor follows the same style as the floor below.
+  
+  The roof is flat and is covered with overlapping roof tiles. One large chimney pokes out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
+  The house itself is surrounded by a modest garden, with mostly grass, a few flower patches and a children's playground.",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+
+)
+
+@home = Home.create!(
+  user: @host,
+  title: "6 Bedroom Home near Lakehouse",
+  img_url:"https://images.unsplash.com/photo-1603622476630-90b1707bedfb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80",
+  description: "From the outside this house looks magnificent. It has been built with white bricks and has oak wooden decorations. Tall, squared windows brighten up the house and have been added to the house in a mostly asymmetric way.
+
+  The house is equipped with an old-fashioned kitchen and two modern bathrooms, it also has a large living room, three bedrooms, a snug dining room and a modest basement.
+  
+  The building is square shaped. The house is half surrounded by a covered patio.
+  The second floor is the same size as the first, which has been built exactly on top of the floor below it. This floor follows the same style as the floor below.
+  
+  The roof is flat and is covered with overlapping roof tiles. One large chimney pokes out the center of the roof. Many smaller windows let in plenty of light to the rooms below the roof.
+  The house itself is surrounded by a modest garden, with mostly grass, a few flower patches and a children's playground.",
+  rate: 250,
+  num_beds: 5,
+  num_baths: 6,
+  avg_rating: 3
+
+)
 puts "#{Home.count} homes created"
 
 
