@@ -60,7 +60,7 @@ export default function Nav(props) {
                   </MenuIcon>
                   {open ? (
                     <Portal>
-                      <div className={classes.dropdown}>
+                      <div className="dropdown">
                         <Link to="/homes">Homes</Link>
                         {currentUser.host? <Link to= '/createhomes'>MyAccount</Link> :
                           <Link to="/bookingconfirmation">MyAccount</Link>}
@@ -71,7 +71,9 @@ export default function Nav(props) {
               </ClickAwayListener>
             </IconButton>
             <Typography variant="h6" className={classes.title}>
+              <Link to= '/homes'>
               ShareSpace
+              </Link>
             </Typography>
             {currentUser ? (
               <>

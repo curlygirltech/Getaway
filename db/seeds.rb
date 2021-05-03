@@ -96,7 +96,7 @@ puts "#{User.count} users created"
   user: @host,
   img_url:"https://images.unsplash.com/photo-1601919051950-bb9f3ffb3fee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
   description: "From the outside this house looks warm and cozy. It has been built with spruce wood and has granite decorations. Tall, rectangular windows allow enough light to enter the home and have been added to the house in a very asymmetric way.
-–
+–≠≠≠≠≠≠≠≠–
   The house is equipped with an average kitchen and one large bathroom, it also has a generous living room, two bedrooms, a small dining area, a bar and a modest garage.
   
   The building is square shaped. The house is fully surrounded by stylish gardens.
