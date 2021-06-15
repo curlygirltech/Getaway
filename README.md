@@ -1,5 +1,7 @@
 # ShareSpace
 
+https://sharespaceapp.netlify.app/
+
 ## Overview
 
 Sharespace is an app where hosts give guests access to their homes for the best stays in their place of choice. Hosts are able to post their home(s) for stay and guests can plan and book their accommodations based on the dates and rates. Your home away from home, Sharespace aims to give you the perfect getaway. 
